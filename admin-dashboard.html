@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Excellence English School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <!-- Admin Navbar -->
+    <nav class="navbar navbar-expand-lg text-white shadow-sm py-3" style="background-color: #1a1a1a;">
+        <div class="container border-0">
+            <a class="navbar-brand text-gold fw-bold" href="#"><i class="fas fa-shield-alt me-2"></i> Excellence Admin</a>
+            <div class="d-flex align-items-center">
+                <span class="me-4 d-none d-md-block text-white">Logged in as: <b>SuperAdmin</b></span>
+                <a href="login.html" class="btn btn-danger btn-sm rounded-pill fw-bold"><i class="fas fa-sign-out-alt me-2"></i>Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Content -->
+    <div class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold text-dark mb-0">Management Overview</h2>
+            <button class="btn btn-primary-custom rounded-pill"><i class="fas fa-download me-2"></i>Export Reports</button>
+        </div>
+        
+        <!-- Stats Row -->
+        <div class="row g-4 mb-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm rounded-3 p-4 border-start border-4 border-primary">
+                    <p class="text-muted fw-bold mb-1">Total Students</p>
+                    <h3 class="fw-bold text-dark mb-0">842</h3>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm rounded-3 p-4 border-start border-4 border-gold">
+                    <p class="text-muted fw-bold mb-1">New Enquiries</p>
+                    <h3 class="fw-bold text-dark mb-0">156</h3>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm rounded-3 p-4 border-start border-4 border-success">
+                    <p class="text-muted fw-bold mb-1">Total Faculty</p>
+                    <h3 class="fw-bold text-dark mb-0">45</h3>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm rounded-3 p-4 border-start border-4 border-danger">
+                    <p class="text-muted fw-bold mb-1">Pending Fees</p>
+                    <h3 class="fw-bold text-dark mb-0">12</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Admission Enquiries Table -->
+        <div class="card border-0 shadow-sm rounded-4 p-4">
+            <h5 class="fw-bold text-primary-blue mb-4">Recent Admission Enquiries</h5>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Date</th>
+                            <th>Student Name</th>
+                            <th>Parent Phone</th>
+                            <th>Grade Applied</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Row 1 -->
+                        <tr>
+                            <td>Jul 31, 2026</td>
+                            <td>Aarav Sharma</td>
+                            <td>+91 9876543210</td>
+                            <td>Class 1</td>
+                            <td><span class="badge bg-warning text-dark">Pending Call</span></td>
+                            <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                        </tr>
+                        <!-- Row 2 -->
+                        <tr>
+                            <td>Jul 30, 2026</td>
+                            <td>Riya Patel</td>
+                            <td>+91 8765432109</td>
+                            <td>Sr KG</td>
+                            <td><span class="badge bg-info text-dark">Followed Up</span></td>
+                            <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                        </tr>
+                        <!-- Row 3 -->
+                        <tr>
+                            <td>Jul 29, 2026</td>
+                            <td>Vihaan Deshmukh</td>
+                            <td>+91 9988776655</td>
+                            <td>Nursery</td>
+                            <td><span class="badge bg-primary">Campus Visit</span></td>
+                            <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                        </tr>
+                        <!-- Row 4 -->
+                        <tr>
+                            <td>Jul 28, 2026</td>
+                            <td>Ananya Kulkarni</td>
+                            <td>+91 9123456789</td>
+                            <td>Class 3</td>
+                            <td><span class="badge bg-success">Admitted</span></td>
+                            <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                        </tr>
+                        <!-- Row 5 -->
+                        <tr>
+                            <td>Jul 27, 2026</td>
+                            <td>Kabir Joshi</td>
+                            <td>+91 9822233445</td>
+                            <td>Playgroup</td>
+                            <td><span class="badge bg-warning text-dark">Pending Call</span></td>
+                            <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                        </tr>
+                        <!-- Row 6 -->
+                        <tr>
+                            <td>Jul 26, 2026</td>
+                            <td>Sai Shinde</td>
+                            <td>+91 7766554433</td>
+                            <td>Class 5</td>
+                            <td><span class="badge bg-info text-dark">Followed Up</span></td>
+                            <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                        </tr>
+                        <!-- Row 7 -->
+                        <tr>
+                            <td>Jul 25, 2026</td>
+                            <td>Myra Patil</td>
+                            <td>+91 8899001122</td>
+                            <td>Jr KG</td>
+                            <td><span class="badge bg-primary">Campus Visit</span></td>
+                            <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

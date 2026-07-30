@@ -1,0 +1,349 @@
+/* =========================================
+   VARIABLES & GLOBAL STYLES
+   ========================================= */
+:root {
+    --primary-blue: #003366; /* Deep Royal Blue */
+    --accent-gold: #D4AF37;  /* Premium Gold */
+    --text-dark: #333333;
+    --text-light: #777777;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* =========================================
+   TOP BAR
+   ========================================= */
+.top-bar {
+    background-color: var(--primary-blue);
+    font-size: 0.9rem;
+}
+
+.top-bar a:hover {
+    color: var(--accent-gold) !important;
+}
+
+/* =========================================
+   NAVIGATION (NAVBAR)
+   ========================================= */
+.school-name {
+    color: var(--primary-blue);
+    letter-spacing: 1px;
+}
+
+.school-tagline {
+    font-size: 0.8rem;
+    color: var(--accent-gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-dark);
+    font-weight: 500;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover, 
+.navbar-nav .nav-link.active {
+    color: var(--primary-blue);
+}
+
+/* Navbar Hover Underline Animation */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-gold);
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: calc(100% - 30px);
+}
+
+/* Custom Admission Button */
+.btn-primary-custom {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    border: 2px solid var(--accent-gold);
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: transparent;
+    color: var(--accent-gold);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.footer-title {
+    color: var(--accent-gold);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-gold);
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links a:hover {
+    color: var(--accent-gold);
+    padding-left: 5px; /* Subtle hover slide effect */
+}
+
+.text-gold {
+    color: var(--accent-gold);
+}
+
+/* Footer Social Icons */
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   UTILITIES
+   ========================================= */
+.text-primary-blue { color: var(--primary-blue) !important; }
+.bg-primary-blue { background-color: var(--primary-blue) !important; }
+.bg-primary-blue-light { background-color: rgba(0, 51, 102, 0.1) !important; }
+.bg-gold { background-color: var(--accent-gold) !important; }
+.text-gold { color: var(--accent-gold) !important; }
+.tracking-wide { letter-spacing: 1.5px; }
+
+/* Custom Buttons */
+.btn-gold {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    border: 2px solid var(--accent-gold);
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: transparent;
+    color: var(--accent-gold);
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.hero-section {
+    min-height: 85vh;
+    /* You can replace the linear-gradient below with a URL to a real photo later: 
+       background-image: url('../images/banner.jpg'); */
+    background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+/* =========================================
+   FEATURES / WHY CHOOSE US
+   ========================================= */
+.feature-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 12px;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.feature-card:hover .icon-wrapper {
+    background-color: var(--primary-blue) !important;
+    color: var(--white) !important;
+    transform: rotateY(180deg);
+}
+
+/* =========================================
+   ACADEMICS SECTION
+   ========================================= */
+.academic-card {
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.academic-card:hover {
+    background-color: var(--accent-gold);
+    border-color: var(--accent-gold) !important;
+    transform: translateY(-5px);
+}
+
+.academic-card:hover h4, 
+.academic-card:hover p {
+    color: var(--primary-blue) !important;
+}
+
+/* =========================================
+   NEWS CARDS
+   ========================================= */
+.news-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card .bg-light {
+    transition: background-color 0.3s ease;
+}
+
+.news-card:hover .bg-light {
+    background-color: var(--primary-blue-light) !important;
+}
+
+/* =========================================
+   PAGE HEADERS (Sub-pages)
+   ========================================= */
+.page-header {
+    background: linear-gradient(135deg, rgba(0, 31, 63, 0.9) 0%, rgba(0, 51, 102, 0.9) 100%), url('https://via.placeholder.com/1920x400/003366/003366');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 5px solid var(--accent-gold);
+}
+
+/* =========================================
+   ADMISSIONS TIMELINE & FORM
+   ========================================= */
+.process-step {
+    position: relative;
+}
+
+/* Draws a line between numbers */
+.process-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 22px;
+    top: 45px;
+    bottom: -15px;
+    width: 2px;
+    background-color: var(--accent-gold);
+    opacity: 0.5;
+}
+
+.custom-input {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.custom-input:focus {
+    background-color: var(--white);
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.25rem rgba(0, 51, 102, 0.1);
+}
+
+/* =========================================
+   GALLERY
+   ========================================= */
+.gallery-card {
+    cursor: pointer;
+}
+
+.gallery-img {
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 51, 102, 0.8);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Gallery Filter Buttons */
+.btn-outline-primary {
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.btn-outline-primary:hover, 
+.btn-outline-primary.active {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-color: var(--primary-blue);
+}
